@@ -1,16 +1,16 @@
 <%= form_with(model: task) do |f| %>
-    <div class="mb-3">
-     <strong><%= f.label :title, class: 'form-label' %></strong>
-      <%= f.text_field :title, class: 'form-control' %>
-    </div>
-    <div class="mb-3">
+  <div class="mb-3">
+    <strong><%= f.label :title, class: 'form-label' %></strong>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="mb-3">
     <strong>  <%= f.label :details, class: 'form-label'  %></strong>
-      <%= f.text_field :details, class: 'form-control' %>
-    </div>
-    <% unless task.new_record? %>
+    <%= f.text_field :details, class: 'form-control' %>
+  </div>
+  <% unless task.new_record? %>
     <%= f.check_box :completed %> <%= f.label :completed, "Completed"%>
-    <% end %>
-    <div class="mb-3">
-      <%= f.submit class: 'btn btn-sm btn-primary' %>
-    </div>
   <% end %>
+  <div class="mb-3">
+    <%= f.submit class: 'btn btn-sm btn-primary' %>
+  </div>
+<% end %>
